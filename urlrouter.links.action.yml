@@ -1,0 +1,6 @@
+entity.urlrouter_entity.add_form:
+  route_name: entity.urlrouter_entity.add_form
+  title: 'Add URL Router'
+  appears_on:
+    - entity.urlrouter_entity.collection
+

@@ -1,0 +1,8 @@
+
+entity.urlrouter_entity.collection:
+  path: "/admin/config/search/urlrouter_entity"
+  defaults:
+    _title: 'URL Router'
+    _entity_list: 'urlrouter_entity'
+  requirements:
+    _permission: 'administer url router'

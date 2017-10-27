@@ -1,0 +1,5 @@
+name: URL Router
+description: Provides the ability to create URL redirects
+core: 8.x
+type: module
+package: URL

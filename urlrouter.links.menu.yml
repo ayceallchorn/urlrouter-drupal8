@@ -1,0 +1,8 @@
+
+# URL Router menu items definition
+urlrouter.collection:
+  title: 'URL router'
+  route_name: entity.urlrouter_entity.collection
+  description: 'Maintain a list of source and destination URLs for which redirects will be performed.'
+  parent: system.admin_config_search
+

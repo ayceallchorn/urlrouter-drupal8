@@ -1,0 +1,7 @@
+
+services:
+  urlrouter.kernel_subscriber:
+    class: Drupal\urlrouter\EventSubscriber\URLRouterKernelSubscriber
+    arguments: ['@kernel']
+    tags:
+      - { name: event_subscriber }
