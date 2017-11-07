@@ -7,9 +7,9 @@
 
 namespace Drupal\urlrouter\EventSubscriber;
 
+use Drupal\Core\Routing\TrustedRedirectResponse;
 use Drupal\urlrouter\Entity\URLRouterEntity;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
@@ -37,7 +37,7 @@ class URLRouterKernelSubscriber implements EventSubscriberInterface {
 
     // This page is flagged to be redirected. We set the response and let
     // Symfony handle everything else.
-    $response = RedirectResponse::create($config->getDestination(), $config->getStatusCode());
+    $response = TrustedRedirectResponse::create($config->getDestination(), $config->getStatusCode());
     $event->setResponse($response);
   }
 
