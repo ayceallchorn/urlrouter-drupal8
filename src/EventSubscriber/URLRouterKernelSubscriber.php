@@ -45,7 +45,8 @@ class URLRouterKernelSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    return [KernelEvents::REQUEST => 'onRequest'];
+    $events[KernelEvents::REQUEST][] = ['onRequest', 40];
+    return $events;
   }
 
 }
